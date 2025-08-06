@@ -33,29 +33,35 @@
       align-items: center;
     }
     .gallery img {
-      max-width: 100%;
-      max-height: 90vh;
+      max-width: 90%;
+      max-height: 70vh;
       height: auto;
       width: auto;
+      object-fit: contain;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
       cursor: pointer;
       background: #fdf6f0;
-      object-fit: contain;
     }
+
     .gallery img:hover,
     .gallery img:focus {
       transform: scale(1.8);
       z-index: 10;
       position: relative;
     }
+
     @media (max-width: 600px) {
       .gallery img:hover,
       .gallery img:focus {
         transform: scale(1.2);
       }
+      .gallery img {
+        max-height: 60vh;
+      }
     }
+
     .btn-back {
       display: inline-block;
       margin-top: 30px;
@@ -70,6 +76,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
     }
+
     .btn-back:hover,
     .btn-back:focus {
       background-color: #b58e5a;
@@ -101,4 +108,14 @@
       <img src="../foto/foto/foto17.jpg" alt="Foto 17">
       <img src="../foto/foto/foto18.jpg" alt="Foto 18">
       <img src="../foto/foto/foto19.jpg" alt="Foto 19">
-      <img src=".
+      <img src="../foto/foto/foto20.jpg" alt="Foto 20">
+      <img src="../foto/foto/foto21.jpg" alt="Foto 21">
+      <img src="../foto/foto/foto22.jpg" alt="Foto 22">
+      <img src="../foto/foto/foto23.jpg" alt="Foto 23">
+    </div>
+
+    <a href="../index.html" class="btn-back">← Zpět na hlavní stránku</a>
+  </section>
+
+</body>
+</html>
