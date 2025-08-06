@@ -28,49 +28,37 @@
     }
     .gallery {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
     }
-    /* Základní styl fotek */
     .gallery img {
+      max-width: 100%;
+      max-height: 90vh;
+      height: auto;
+      width: auto;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: transform 0.3s ease;
       cursor: pointer;
-      object-fit: contain;
       background: #fdf6f0;
+      object-fit: contain;
     }
-    /* Šířkové fotky */
-    .gallery img.landscape {
-      max-width: 400px;
-      height: auto;
-      width: 100%;
-    }
-    /* Výškové fotky */
-    .gallery img.portrait {
-      max-height: 400px;
-      width: auto;
-      max-width: 100%;
-    }
-    /* Hover efekt na desktopu */
     .gallery img:hover,
     .gallery img:focus {
       transform: scale(1.8);
       z-index: 10;
       position: relative;
     }
-    /* Ochrana proti překročení na mobilech */
     @media (max-width: 600px) {
       .gallery img:hover,
       .gallery img:focus {
         transform: scale(1.2);
       }
     }
-    /* Styl tlačítka */
     .btn-back {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 30px;
       padding: 10px 25px;
       font-size: 1.1em;
       color: white;
@@ -93,7 +81,7 @@
 
   <section class="gallery-section">
     <h1>Fotogalerie</h1>
-    <div class="gallery" id="gallery">
+    <div class="gallery">
       <img src="../foto/foto/foto01.jpg" alt="Foto 1">
       <img src="../foto/foto/foto02.jpg" alt="Foto 2">
       <img src="../foto/foto/foto03.jpg" alt="Foto 3">
@@ -113,32 +101,4 @@
       <img src="../foto/foto/foto17.jpg" alt="Foto 17">
       <img src="../foto/foto/foto18.jpg" alt="Foto 18">
       <img src="../foto/foto/foto19.jpg" alt="Foto 19">
-      <img src="../foto/foto/foto20.jpg" alt="Foto 20">
-      <img src="../foto/foto/foto21.jpg" alt="Foto 21">
-      <img src="../foto/foto/foto22.jpg" alt="Foto 22">
-      <img src="../foto/foto/foto23.jpg" alt="Foto 23">
-    </div>
-
-    <a href="../index.html" class="btn-back" role="button" aria-label="Zpět na hlavní stránku">← Zpět na hlavní stránku</a>
-  </section>
-
-  <script>
-    // Po načtení obrázků zjistí poměr stran a přidá class portrait nebo landscape
-    window.addEventListener('load', () => {
-      const images = document.querySelectorAll('#gallery img');
-      images.forEach(img => {
-        const tempImg = new Image();
-        tempImg.src = img.src;
-        tempImg.onload = () => {
-          if(tempImg.naturalHeight > tempImg.naturalWidth) {
-            img.classList.add('portrait');
-          } else {
-            img.classList.add('landscape');
-          }
-        };
-      });
-    });
-  </script>
-
-</body>
-</html>
+      <img src=".
