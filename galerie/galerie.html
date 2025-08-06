@@ -67,6 +67,26 @@
         transform: scale(1.2);
       }
     }
+    /* Styl tlačítka */
+    .btn-back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      font-size: 1.1em;
+      color: white;
+      background-color: #d4af7f;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    .btn-back:hover,
+    .btn-back:focus {
+      background-color: #b58e5a;
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -98,6 +118,8 @@
       <img src="../foto/foto/foto22.jpg" alt="Foto 22">
       <img src="../foto/foto/foto23.jpg" alt="Foto 23">
     </div>
+
+    <a href="../index.html" class="btn-back" role="button" aria-label="Zpět na hlavní stránku">← Zpět na hlavní stránku</a>
   </section>
 
   <script>
@@ -105,7 +127,6 @@
     window.addEventListener('load', () => {
       const images = document.querySelectorAll('#gallery img');
       images.forEach(img => {
-        // Nový Image objekt na získání přirozených rozměrů
         const tempImg = new Image();
         tempImg.src = img.src;
         tempImg.onload = () => {
